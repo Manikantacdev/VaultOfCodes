@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Recipe Cards</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+
+    <h1 class="page-title">Recipe Items</h1>
+
+    <div class="recipe-items">
+
+        <!-- Recipe 1: Chocolate Cake -->
+        <div class="recipe-card" id="recipe1">
+            <h2>Chocolate Cake</h2>
+            <img src="https://image.similarpng.com/file/similarpng/very-thumbnail/2020/12/Hand-drawn-chocolate-cake-ontransparent-background-PNG.png"
+                alt="Chocolate Cake" class="recipe-img">
+            <p class="meta">Prep Time: 45 mins | Serves: 8</p>
+
+            <button onclick="toggleSection('ingredients1')">Show Ingredients</button>
+            <ul class="hidden" id="ingredients1">
+                <li>1 cup flour</li>
+                <li>1/2 cup cocoa powder</li>
+                <li>1 tsp baking soda</li>
+                <li>1/2 cup sugar</li>
+                <li>2 eggs</li>
+            </ul>
+
+            <button onclick="toggleSection('steps1')">Show Steps</button>
+            <ol class="hidden" id="steps1">
+                <li>Preheat the oven to 350°F (175°C).</li>
+                <li>Mix dry ingredients.</li>
+                <li>Add wet ingredients and stir.</li>
+                <li>Pour into a pan and bake for 30 minutes.</li>
+            </ol>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress1"></div>
+            </div>
+
+            <button onclick="startCooking('steps1', 'progress1')">Start Cooking</button>
+            <button onclick="nextStep('steps1', 'progress1')">Next Step</button>
+        </div>
+
+        <!-- Recipe 2: Spaghetti Bolognese -->
+        <div class="recipe-card" id="recipe2">
+            <h2>Spaghetti Bolognese</h2>
+            <img src="https://static.vecteezy.com/system/resources/previews/022/025/067/non_2x/spaghetti-meal-isolated-on-a-transparent-background-png.png"
+                alt="Spaghetti Bolognese" class="recipe-img">
+            <p class="meta">Prep Time: 30 mins | Serves: 4</p>
+
+            <button onclick="toggleSection('ingredients2')">Show Ingredients</button>
+            <ul class="hidden" id="ingredients2">
+                <li>200g spaghetti</li>
+                <li>1 onion, chopped</li>
+                <li>2 garlic cloves</li>
+                <li>400g minced meat</li>
+                <li>1 cup tomato sauce</li>
+            </ul>
+
+            <button onclick="toggleSection('steps2')">Show Steps</button>
+            <ol class="hidden" id="steps2">
+                <li>Cook spaghetti until al dente.</li>
+                <li>Sauté onion and garlic.</li>
+                <li>Add minced meat and cook.</li>
+                <li>Pour in tomato sauce and simmer.</li>
+                <li>Mix with spaghetti and serve.</li>
+            </ol>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress2"></div>
+            </div>
+
+            <button onclick="startCooking('steps2', 'progress2')">Start Cooking</button>
+            <button onclick="nextStep('steps2', 'progress2')">Next Step</button>
+        </div>
+
+
+        <!-- Recipe 3: Pancakes -->
+        <div class="recipe-card" id="recipe3">
+            <h2>Fluffy Pancakes</h2>
+            <img src="https://png.pngtree.com/png-clipart/20241206/original/pngtree-american-pancakes-isolated-on-white-transparent-background-png-image_17626442.png"
+                alt="Pancakes" class="recipe-img">
+            <p class="meta">Prep Time: 20 mins | Serves: 4</p>
+
+            <button onclick="toggleSection('ingredients3')">Show Ingredients</button>
+            <ul class="hidden" id="ingredients3">
+                <li>1.5 cups flour</li>
+                <li>1 tbsp sugar</li>
+                <li>1 tsp baking powder</li>
+                <li>1 egg</li>
+                <li>1 cup milk</li>
+            </ul>
+
+            <button onclick="toggleSection('steps3')">Show Steps</button>
+            <ol class="hidden" id="steps3">
+                <li>Mix dry ingredients.</li>
+                <li>Whisk in egg and milk until smooth.</li>
+                <li>Pour batter onto hot griddle.</li>
+                <li>Cook until bubbles form, flip and cook other side.</li>
+            </ol>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress3"></div>
+            </div>
+
+            <button onclick="startCooking('steps3', 'progress3')">Start Cooking</button>
+            <button onclick="nextStep('steps3', 'progress3')">Next Step</button>
+        </div>
+
+        <!-- Recipe 4: Caesar Salad -->
+        <div class="recipe-card" id="recipe4">
+            <h2>Caesar Salad</h2>
+            <img src="https://png.pngtree.com/png-vector/20240510/ourmid/pngtree-veg-caesar-salad-png-image_12372147.png"
+                alt="Caesar Salad" class="recipe-img">
+            <p class="meta">Prep Time: 15 mins | Serves: 2</p>
+
+            <button onclick="toggleSection('ingredients4')">Show Ingredients</button>
+            <ul class="hidden" id="ingredients4">
+                <li>1 romaine lettuce</li>
+                <li>1/2 cup croutons</li>
+                <li>2 tbsp grated parmesan</li>
+                <li>Caesar dressing</li>
+                <li>1 grilled chicken breast (optional)</li>
+            </ul>
+
+            <button onclick="toggleSection('steps4')">Show Steps</button>
+            <ol class="hidden" id="steps4">
+                <li>Wash and chop lettuce.</li>
+                <li>Add croutons and parmesan.</li>
+                <li>Toss with Caesar dressing.</li>
+                <li>Add grilled chicken if desired and serve.</li>
+            </ol>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress4"></div>
+            </div>
+
+            <button onclick="startCooking('steps4', 'progress4')">Start Cooking</button>
+            <button onclick="nextStep('steps4', 'progress4')">Next Step</button>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
